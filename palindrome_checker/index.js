@@ -1,5 +1,4 @@
 let palindrome = document.getElementById("text-input");
-let alindrome = palindrome.value.toLowerCase();
 let result = document.getElementById("result");
 const button = document.getElementById("check-btn");
 
@@ -8,8 +7,13 @@ function palindromeChecker() {
   if (palindrome.value === "") {
     return alert("Please input a value");
   }
+
+  // Remove non-alphanumeric characters
+  let lindrome = palindrome.value.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
+  let alindrome = lindrome.split("").reverse().join("");
+
   // Compare the cleaned string with its reverse
-  if (alindrome === alindrome.split("").reverse().join("")) {
+  if (lindrome === alindrome) {
     result.textContent = `${palindrome.value} is a palindrome`;
   } else {
     result.textContent = `${palindrome.value} is not a palindrome`;

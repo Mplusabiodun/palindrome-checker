@@ -59,3 +59,23 @@ input {
   font-weight: 400;
   letter-spacing: 1px;
 }
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin: 14rem auto 0;
+    width: 75%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Mobile ----------- */
+@media only screen and (max-width: 767px) {
+  .container {
+    margin: 8rem auto 0;
+    width: 80%;
+  }
+}
